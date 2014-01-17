@@ -68,6 +68,8 @@ webview.setWebViewClient(new WebViewClient() {
                 "con.style.display = 'none'; ");//Who's online
         view.loadUrl("javascript:var con = document.getElementById('block-user-1'); " +
                 "con.style.display = 'none'; ");//Quick links
+        view.loadUrl("javascript:var anchors = document.getElementsByTagName('a'); " +
+                " for (var i = 0; i < anchors.length; i++) {anchors[i].onclick = function() {return(false);};};");//...and finally all links.
 
     }            
 	public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
