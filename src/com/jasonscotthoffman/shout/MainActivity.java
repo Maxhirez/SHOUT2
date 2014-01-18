@@ -51,9 +51,11 @@ webview.setWebViewClient(new WebViewClient() {
                 "con.style.display = 'none'; ");
         //get rid of chillout zone
         
-        /*Bird version-comment out for most.
-        view.loadUrl("javascript:var con = document.getElementByTagName('hd'); " +
-                "con.style.display = 'none'; ");*/
+        //Bird version-comment out for most.
+        view.loadUrl("javascript:var con = document.getElementById('hd'); " +
+                "con.style.display = 'none'; ");
+ 		view.loadUrl("javascript:var con = document.getElementById('ft'); " +
+                "con.style.display = 'none'; ");
         
         //get sidebar-right (shoutbox or log-in) element and make it full screen
         view.loadUrl("javascript:var con = document.getElementById('sidebar-right'); " +
